@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Principal"
+    android:background="@drawable/fondo">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:weightSum="1"
+        android:id="@+id/contenedor_general">
+
+        <ImageView
+            android:layout_width="215dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgvLogo"
+            android:background="@drawable/icono"
+            android:layout_weight="0.06"
+            android:contentDescription="Logo principal de la aplicacion"
+            android:paddingBottom="30dp" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/pbProgreso"
+            android:layout_gravity="center_horizontal"
+            android:indeterminate="false"
+            android:paddingTop="10dp" />
+
+    </LinearLayout>
+</RelativeLayout>

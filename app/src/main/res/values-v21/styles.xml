@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar">
+        <item name="android:colorPrimary">#4CAF50</item>
+        <item name="android:colorPrimaryDark">#388E3C</item>
+        <item name="android:windowBackground">@android:color/background_light</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:textColorPrimary">#212121</item>
+        <item name="android:textColorSecondary">#727272</item>
+        <item name="android:colorAccent">#8BC34A</item>
+        <item name="android:colorButtonNormal">#ff686a65</item>
+        <item name="android:divider">#B6B6B6</item>
+        <item name="android:navigationBarColor">#4CAF50</item>
+    </style>
+    <style name="StartTheme" parent="android:Theme.Material.Light.NoActionBar.Fullscreen">
+    </style>
+</resources>
