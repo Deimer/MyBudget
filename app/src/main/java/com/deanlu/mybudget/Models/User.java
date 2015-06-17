@@ -6,10 +6,10 @@ import java.util.Date;
 
 /**
  * Created by Deimer on 17/06/2015.
- *  * ----------------------------------------------------
+ * ----------------------------------------------------
  * Clase modelo del objeto usuario con su nombre en ingles User.
- * Esta clase usa la libreria ORMLite para manejar la relación
- * de la clase usuario con la tabla users en la base de datos
+ * Esta clase usa la libreria ORMLite para manejar la relacion
+ * de la clase User(usuario) con la tabla users en la base de datos
  * Cualquier atributo o propiedad del objeto user, debe ser agregado
  * aqui para que este se agregue en la base de datos.
  */
@@ -47,47 +47,50 @@ public class User {
         this.setUsername(UserName);
     }
 
+    //Getters del objeto
     public int getId() {
         return id;
     }
     public String getFirst_name() {
         return first_name;
     }
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
-    }
     public String getLast_name() {
         return last_name;
-    }
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
     }
     public String getEmail() {
         return email;
     }
-    public void setEmail(String email) {
-        this.email = email;
-    }
     public Date getBirthdate() {
         return birthdate;
-    }
-    public void setBirthdate(Date birthdate) {
-        this.birthdate = birthdate;
     }
     public String getGender() {
         return gender;
     }
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
     public String getPassword() {
         return password;
     }
-    public void setPassword(String password) {
-        this.password = password;
-    }
     public String getUsername() {
         return username;
+    }
+
+    //Setters del objeto
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+    }
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    public void setBirthdate(Date birthdate) {
+        this.birthdate = birthdate;
+    }
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
     public void setUsername(String username) {
         this.username = username;
