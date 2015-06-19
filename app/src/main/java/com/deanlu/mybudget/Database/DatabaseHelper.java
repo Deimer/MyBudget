@@ -22,9 +22,10 @@ import java.sql.SQLException;
  */
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper{
 
+    //Variables que manejaran la informacion estadar de la base de datos
     private static final String DATABASE_NAME = "mybudget.db";
     private static final int DATABASE_VERSION = 1;
-
+    //Variables manejadoras de las funciones de la libreria ORMLite
     private Dao<User, Integer> userDAO = null;
     private Dao<Entry, Integer> entryDAO = null;
     private Dao<Outgo, Integer> outgoDAO = null;
