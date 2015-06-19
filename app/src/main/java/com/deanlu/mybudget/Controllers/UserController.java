@@ -11,7 +11,8 @@ import com.j256.ormlite.dao.RuntimeExceptionDao;
  * Created by Deimer on 18/06/2015.
  * ----------------------------------------------------
  * Esta clase es la encargada de manejar las funciones
- * de la logica de los datos del modelo u objeto que se administre
+ * de la logica de los datos del modelo User(Usuario)
+ * que se tiene que llevar a cabo por la aplicación.
  */
 public class UserController {
 
@@ -19,7 +20,7 @@ public class UserController {
     DatabaseHelper dbHelper;
 
     //Funcion que permite la creacion de un usuario nuevo
-    public boolean crearUsuario(User user,Context context){
+    public boolean create(User user,Context context){
         boolean res = true;
         try {
             dbHelper = OpenHelperManager.getHelper(context,DatabaseHelper.class);
@@ -27,13 +28,13 @@ public class UserController {
             userDao.create(user);
         } catch (Exception ex) {
             res = false;
-            Log.e("UserController(crearUsuario)", "Error: " + ex.toString());
+            Log.e("UserController(create)", "Error: " + ex.toString());
         }
         return res;
     }
 
     //Funcion que permite el actualizar los datos de un usuario
-    public boolean actualizarUsuario(User user, Context context){
+    public boolean update(User user, Context context){
         boolean res = true;
         try {
             dbHelper = OpenHelperManager.getHelper(context,DatabaseHelper.class);
@@ -41,13 +42,13 @@ public class UserController {
             userDao.update(user);
         } catch (Exception ex) {
             res = false;
-            Log.e("UserController(actualizarUsuario)", "Error: " + ex.toString());
+            Log.e("UserController(update)", "Error: " + ex.toString());
         }
         return res;
     }
 
     //Funcion que permite eliminar un usuario de la base de datos
-    public boolean eliminarusuario(User user, Context context){
+    public boolean delete(User user, Context context){
         boolean res = true;
         try {
             dbHelper = OpenHelperManager.getHelper(context,DatabaseHelper.class);
@@ -55,13 +56,13 @@ public class UserController {
             userDao.delete(user);
         } catch (Exception ex) {
             res = false;
-            Log.e("UserController(eliminarUsuario)", "Error: " + ex.toString());
+            Log.e("UserController(delete)", "Error: " + ex.toString());
         }
         return res;
     }
 
     //Funcion que permite la busqueda de un usuario mediante su id
-    public User detalleUser(int id, Context context){
+    public User detail(int id, Context context){
         User user;
         try {
             dbHelper = OpenHelperManager.getHelper(context,DatabaseHelper.class);
@@ -69,7 +70,7 @@ public class UserController {
             user = userDao.queryForId(id);
         } catch (Exception ex) {
             user = null;
-            Log.e("UserController(detalleUser)", "Error: " + ex.toString());
+            Log.e("UserController(detail)", "Error: " + ex.toString());
         }
         return user;
     }
