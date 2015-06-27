@@ -43,7 +43,8 @@ public class Inicio extends Activity {
             public void onFinish(){
                 Intent principal = new Intent(Inicio.this,Principal.class);
                 startActivity(principal);
-                finish();
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                //finish();
             }
         }.start();
     }

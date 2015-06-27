@@ -12,7 +12,7 @@ import com.j256.ormlite.dao.RuntimeExceptionDao;
  * ----------------------------------------------------
  * Esta clase es la encargada de manejar las funciones
  * de la logica de los datos del modelo Outgo(Gasto)
- * que se tiene que llevar a cabo por la aplicación.
+ * que se tiene que llevar a cabo por la aplicacion.
  */
 public class OutgoController {
 
