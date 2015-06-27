@@ -44,7 +44,7 @@ public class Inicio extends Activity {
                 Intent principal = new Intent(Inicio.this,Principal.class);
                 startActivity(principal);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                //finish();
+                finish();
             }
         }.start();
     }

@@ -26,7 +26,8 @@ public class Principal extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
-        guardarDatos();
+        //guardarDatos();
+        mostrarDatos();
     }
 
     @Override
@@ -58,6 +59,16 @@ public class Principal extends Activity{
             Log.i("Mensaje", "Guardado con exito");
         }catch (Exception ex){
             Log.e("Error al guardar","Error: "+ex.toString());
+        }
+    }
+
+    public void mostrarDatos(){
+        try {
+            User user = userController.detail(1,this.getApplicationContext());
+            String nombre = user.getFirst_name()+" "+user.getLast_name();
+            Log.i("Usuario", nombre);
+        }catch (Exception ex){
+            Log.e("Error al mostrar","Error: "+ex.toString());
         }
     }
 
