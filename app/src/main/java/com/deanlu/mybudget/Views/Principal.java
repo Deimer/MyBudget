@@ -45,6 +45,7 @@ public class Principal extends Activity{
         return super.onOptionsItemSelected(item);
     }
 
+    //Metodo para guardar datos
     public void guardarDatos(){
         try {
             User user = new User();
